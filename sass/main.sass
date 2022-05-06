@@ -1,0 +1,516 @@
+@import ../sass/partials/mixins
+@import ../sass/partials/functions
+@import ../sass/partials/colors
+@import ../sass/partials/type
+@import ../sass/partials/switcher
+@import ../sass/partials/revealer
+@import ../sass/partials/swiper
+@import ../sass/partials/carousel
+
+
+//reset containeru
+.categoryPage .category-description
+    padding: 0!important
+
+//articlePage
+#brandPage
+    display: block
+    position: relative
+    @include roboto
+    background-color: $c-white
+    color: $c-grey-6
+
+    //reset
+    *, *::before, *::after
+        box-sizing: border-box
+
+    h1, h2, h3, h4, p, ul, ol, li, figure
+        margin: 0
+        padding: 0
+
+    input, button, textarea, select
+        font: inherit
+
+    .hidden
+        display: none!important
+
+    //alza  styles reset
+    &.blank p
+            margin-top: 0
+
+    //links
+    a
+        transition: all 200ms ease-in-out
+
+    //imgs
+    img
+        display: block
+        height: auto
+        max-width: 100%
+        aspect-ratio: attr(width), attr(height)
+
+    //btns
+    .alza-btn
+        &__grey
+            background-color: $c-grey-1
+            color: $c-grey-6
+            @include btnStates($c-grey-1)
+        &__normal
+            &__adjusting
+                @include btnAppearance(42, 14)
+                padding: 0 15px
+
+    //infoboxes
+    .alza-infobox
+        text-align: center
+        border-radius: 4px
+        box-shadow: 0 1px 4px 0px rgba(0,0,0,0.15)
+        padding: 24px 16px 32px 16px
+        @include flexVert
+        align-items: center
+        justify-content: space-between
+        flex-basis: calc((100% - 24px * (3 - 1)) / 3)
+        height: 416px
+        cursor: default
+
+        img
+            width: 144px
+
+        &:hover
+            box-shadow: 0 2px 6px 0px rgba(0,0,0,0.15)
+
+        &--layout
+            @include flexVert
+            align-items: center
+            gap: 16px
+
+        &--heading
+            @include type(16px, 1.25, 500)
+
+        &--text
+            @include type(14px, 1.5, 400)
+
+        &--container
+            @include flexHor
+            flex-wrap: wrap
+            justify-content: center
+            gap: 24px
+
+    //tabs
+    .alza-tab
+        width: 120px
+        height: 46px
+        background-color: $c-grey-0
+        border: 1px solid $c-grey-3
+        border-radius: 4px 4px 0 0
+        border-bottom: none
+        text-decoration: none
+        color: $c-grey-6
+        @include type(16px, 1, 500)
+        text-align: center
+        padding: 15px 0
+        cursor: pointer
+        position: relative
+        transition: background 300ms ease
+
+        &::before
+            display: none
+        
+        &:hover
+            background-color: $c-grey-2
+
+        &.alza-tab__active
+            background-color: $c-white
+
+            &:hover
+                background-color: $c-white
+
+            &::before
+                background: $c-ochre-pet
+                right: -1px
+                left: -1px
+                top: -1px
+                display: block
+                position: absolute
+                z-index: 1
+                height: 3px
+                content: ""
+                margin: 0
+                border-radius: 3px 3px 0 0
+
+            &::after
+                position: absolute
+                z-index: 1
+                height: 3px
+                content: ""
+                left: 0
+                right: 0
+                bottom: -2px
+                background: #fff
+
+        &--container
+            list-style: none
+            border-bottom: 1px solid $c-grey-3
+            @include flexHor
+            justify-content: center
+            gap: 6px
+            margin-bottom: 48px
+
+        &--content
+            display: none
+
+            &.alza-tab--content__shown
+                display: block
+
+
+    //cards
+    .alza-card
+        text-align: center
+        @include flexVert
+        gap: 12px
+
+        &--container
+            @include flexHor
+            flex-wrap: wrap
+            justify-content: center
+            gap: 24px
+
+        &--heading
+            @include type(16px, 1.25, 500)
+
+        &--text
+            @include type(14px, 1.5, 400)
+
+        &--icon
+            max-height: 65px
+
+
+    //layout
+    .bp-container
+        &__10
+            padding-left: 108px
+            padding-right: 108px
+
+        &__12
+            padding-left: 30px
+            padding-right: 30px
+
+    .bp-row
+        @include flexHor
+        justify-content: center
+        gap: 24px
+
+    .bp-column
+        @include flexVert
+        gap: 36px
+
+    section
+        padding-top: 84px
+
+
+    //content
+    .bp-header
+        @include flexVert
+        align-items: center
+        gap: 36px
+        text-align: center
+        padding-top: 0
+
+        &--logo
+            width: 160px
+
+        &--banner
+            background-color: $c-black
+            width: 100%
+            @include flexHor
+            justify-content: space-between
+            align-items: flex-end
+
+        &--caption
+            padding: 36px 0
+            @include flexVert
+            align-items: center
+            align-self: center
+            gap: 48px
+
+            svg
+                width: 240px
+
+        &--text
+            @include flexVert
+            gap: 16px
+        
+        &--divider
+            height: 1.5px
+            display: block
+            background: linear-gradient(to left, $c-black 0%, $c-ochre-purina 50%, $c-black 100% )
+
+    .bp-flavor
+        @include flexHor
+        align-items: center
+        gap: 24px
+        justify-content: space-between
+
+        &__icons
+            max-width: calc((100% - 24px * (2 - 1)) / 2)
+            margin: auto
+
+        &__text
+            max-width: calc((100% - 24px * (2 - 1)) / 2)
+            @include flexVert
+            gap: 36px
+
+        svg
+            width: 350px
+            height: 350px
+
+    .bp-nutrition
+        text-align: center
+        @include flexVert
+        gap: 36px
+
+        .alza-card
+            max-width: calc((100% - 24px * (3 - 1)) / 3)
+
+    .bp-poll
+        text-align: center
+        @include flexVert
+        gap: 36px
+
+        &--container
+            @include flexHor
+            justify-content: center
+            gap: 24px
+            margin-top: 24px
+
+        .bp-divider
+            width: 2px
+            background-color: $c-grey-3
+
+        .alza-card
+            padding-bottom: 0
+            flex: 1 1 0
+
+            &--heading
+                width: 160px
+                margin: 0 auto        
+
+//3col
+.layout-0 #brandPage
+    .bp-header
+        &--logo
+            width: 120px
+
+        &--caption
+            gap: 24px
+            svg
+                width: 150px
+                height: auto
+        img
+            width: 30%
+
+    .bp-flavor
+        &__text
+            gap: 12px
+        
+        &__icons svg
+            height: 300px
+            width: 300px
+
+    .bp-categories
+        .alza-infobox
+            flex-basis: calc((100% - 24px * (2 - 1)) / 2)
+            
+//mobile
+@media only screen and (max-width: 810px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-header
+            &--logo
+                width: 120px
+
+            &--caption
+                gap: 32px
+
+                svg
+                    width: 150px
+                    height: auto
+
+            &__cat, &__dog
+                width: 30%
+
+        .bp-flavor
+            &__text
+                gap: 12px
+
+            &__icons svg
+                width: 250px
+                height: 250px
+
+        .bp-categories
+            .bp-categories
+            .bp-container__10
+                padding-left: 30px
+                padding-right: 30px
+
+            .alza-infobox
+                flex-basis: calc((100% - 24px * (2 - 1)) / 2)
+
+                img
+                    width: 128px
+
+        .bp-poll
+            &--container
+                flex-direction: column
+
+            &--divider
+                display: none
+
+            .bp-row
+                gap: 48px
+
+            .alza-card
+                max-width: calc((100% - 48px * (2 - 1)) / 2)
+
+@media only screen and (max-width: 720px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-header
+            &--caption
+                gap: 12px
+                padding: 16px 0
+
+                svg
+                    width: 100px
+                    height: auto
+
+            &__cat, &__dog
+                width: 25%
+
+            &--divider
+                display: none
+
+            .bp-heading--h1
+                width: auto
+
+        .bp-flavor
+            flex-direction: column
+            text-align: center
+
+            &__icons
+                max-width: 100%
+
+            &__text
+                margin-top: 48px
+                max-width: 100%
+
+                .bp-heading--h2
+                    margin-bottom: 24px
+
+        .bp-nutrition
+            .alza-card
+                max-width: calc((100% - 24px * (2 - 1)) / 2)
+
+@media only screen and (max-width: 635px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-categories
+            .alza-infobox
+                height: 440px
+
+@media only screen and (max-width: 570px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-container
+            &__10, &__12
+                padding-left: 15px
+                padding-right: 15px
+
+            section
+                padding-top: 72px
+
+                &.bp-header
+                    padding-top: 0
+
+        .bp-header
+            &--banner
+                flex-direction: row-reverse
+
+            &__cat
+                display: none
+
+            &__dog
+                transform: scaleX(-1)
+                width: 40%
+
+            &--caption
+                flex-grow: 1
+                text-align: left
+                align-items: flex-start
+                padding-left: 30px
+                gap: 32px
+
+        .bp-categories
+            .bp-container__10
+                padding-left: 15px
+                padding-right: 15px
+
+@media only screen and (max-width: 500px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-categories
+            .alza-infobox
+                &--container
+                    flex-direction: column
+
+                img
+                    width: 96px
+
+            .alza-btn
+                margin-top: 24px
+
+        .bp-categories
+            .alza-tab--container
+                padding: 0 15px
+
+@media only screen and (max-width: 440px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-header
+            &--banner
+                flex-direction: column-reverse
+                align-items: flex-end
+            
+            &--caption
+                text-align: center
+                padding: 40px 40px 24px 40px
+                align-items: center
+
+                svg
+                    width: 160px
+
+            &__dog
+                width: 80%
+
+        .bp-nutrition
+            .alza-card
+                max-width: 100%
+
+                &--container
+                    flex-direction: column
+
+        .bp-poll
+            .alza-card
+                max-width: 100%
+
+            .bp-row
+                flex-direction: column
+
+@media only screen and (max-width: 320px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-categories
+            .alza-tab
+                font-size: 12px
+                height: 32px
+                line-height: 6px

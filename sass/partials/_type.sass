@@ -1,0 +1,57 @@
+#brandPage
+    .bp-heading--h1
+        @include type(24px, 1.25, 400)
+        color: $c-white
+        text-transform: uppercase
+        
+    .bp-heading--h2
+        @include type(20px, 1.25, 500)
+        color: $c-ochre-pet
+
+    .text__large
+        @include type(16px, 1.5, 400)
+
+    .text__normal
+        @include type(14px, 1.5, 400)
+
+//3col
+.layout-0 #brandPage
+    .bp-heading--h1
+        @include type(20px, 1.25, 400)
+    
+    .bp-heading--h2
+            @include type(18px, 1.25, 500)
+
+    .text__large
+        @include type(14px, 1.5, 400)
+
+    .text__normal
+        @include type(12px, 1.5, 400)
+
+//querries
+@media only screen and (max-width: 1025px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-heading--h1
+            @include type(20px, 1.25, 400)
+
+@media only screen and (max-width: 810px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-heading--h1
+            @include type(18px, 1.25, 400)
+
+        .bp-heading--h2
+            @include type(16px, 1.25, 500)
+
+        .text__large
+            @include type(14px, 1.5, 400)
+
+        .text__normal
+            @include type(12px, 1.5, 400)
+
+@media only screen and (max-width: 355px)
+    .mobile #brandPage,
+    .mobileapp #brandPage
+        .bp-heading--h1
+            @include type(16px, 1.25, 400)
