@@ -5,20 +5,17 @@
   color: #ffffff;
   text-transform: uppercase;
 }
-
 #brandPage .bp-heading--h2 {
   font-size: 20px;
   line-height: 25px;
   font-weight: 500;
   color: #cb8f10;
 }
-
 #brandPage .text__large {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
-
 #brandPage .text__normal {
   font-size: 14px;
   line-height: 21px;
@@ -30,19 +27,16 @@
   line-height: 25px;
   font-weight: 400;
 }
-
 .layout-0 #brandPage .bp-heading--h2 {
   font-size: 18px;
   line-height: 22.5px;
   font-weight: 500;
 }
-
 .layout-0 #brandPage .text__large {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-
 .layout-0 #brandPage .text__normal {
   font-size: 12px;
   line-height: 18px;
@@ -57,7 +51,6 @@
     font-weight: 400;
   }
 }
-
 @media only screen and (max-width: 810px) {
   .mobile #brandPage .bp-heading--h1,
   .mobileapp #brandPage .bp-heading--h1 {
@@ -84,7 +77,6 @@
     font-weight: 400;
   }
 }
-
 @media only screen and (max-width: 355px) {
   .mobile #brandPage .bp-heading--h1,
   .mobileapp #brandPage .bp-heading--h1 {
@@ -93,27 +85,42 @@
     font-weight: 400;
   }
 }
-
 #layout_switch {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  left: 25px;
+  left: 20px;
   top: 20px;
   z-index: 100;
+  width: 180px;
+  height: 70px;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
 }
-
 #layout_switch button {
-  display: block;
-  color: #fff;
-  background: #ff4757;
-  font-size: 110%;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  margin-bottom: 10px;
-  border: 2px solid #E23140;
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(255, 71, 86, 0.6);
-          box-shadow: 0px 4px 10px 0px rgba(255, 71, 86, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
   cursor: pointer;
+  border: none;
+}
+#layout_switch button .icon {
+  width: 30px;
+  height: 30px;
+  fill: #737373;
+}
+#layout_switch button.active {
+  box-shadow: inset 0px 2px 4px 0px rgba(128, 128, 128, 0.7);
 }
 
 #brandPage {
@@ -124,8 +131,7 @@
   background: #FFFFFF;
   font-size: 16px;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -137,7 +143,8 @@
   width: 810px;
 }
 
-.mobile #brandPage .flex-container {
+.mobile #brandPage,
+.flex-container {
   max-width: 100%;
 }
 
@@ -145,8 +152,7 @@
   background-color: #f8f8f8;
   color: #212121;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   height: 32px;
   line-height: 32px;
   font-size: 14px;
@@ -155,56 +161,46 @@
   font-weight: 500;
   display: inline-block;
   border: none;
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   cursor: pointer;
   padding: 0;
   width: 120px;
 }
-
 #brandPage .bp-revealer:hover {
   background-color: #e9e9e9;
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
 }
-
 #brandPage .bp-revealer:active {
   background-color: #d9d9d9;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 #brandPage .bp-revealer__disabled {
   background-color: rgba(248, 248, 248, 0.5);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 #brandPage .bp-revealer--container {
   padding: 48px 0;
   margin: auto;
   width: 120px;
 }
-
 #brandPage .bp-toggle-content {
   display: none;
 }
-
 #brandPage .bp-toggle-content.is-visible {
   display: block;
 }
 
 /**
- * Swiper 5.3.0
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * http://swiperjs.com
- *
- * Copyright 2014-2020 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: January 11, 2020
- */
+ * * Swiper 5.3.0
+ * * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * * http://swiperjs.com
+ * *
+ * * Copyright 2014-2020 Vladimir Kharlampidi
+ * *
+ * * Released under the MIT License
+ * *
+ * * Released on: January 11, 2020
+ * */
 .swiper-container {
   margin-left: auto;
   margin-right: auto;
@@ -216,10 +212,7 @@
 }
 
 .swiper-container-vertical > .swiper-wrapper {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .swiper-wrapper {
@@ -227,53 +220,36 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
-  -webkit-transform: translate3d(0px, 0, 0);
-          transform: translate3d(0px, 0, 0);
+  transform: translate3d(0px, 0, 0);
 }
 
 .swiper-container-multirow > .swiper-wrapper {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .swiper-container-multirow-column > .swiper-wrapper {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .swiper-container-free-mode > .swiper-wrapper {
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
   margin: 0 auto;
 }
 
 .swiper-slide {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   width: 100%;
   height: 100%;
   position: relative;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
 }
 
 .swiper-slide-invisible-blank {
@@ -286,18 +262,12 @@
 }
 
 .swiper-container-autoheight .swiper-wrapper {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-transition-property: height, -webkit-transform;
-  transition-property: height, -webkit-transform;
+  align-items: flex-start;
   transition-property: transform, height;
-  transition-property: transform, height, -webkit-transform;
 }
 
 .swiper-container-3d {
-  -webkit-perspective: 1200px;
-          perspective: 1200px;
+  perspective: 1200px;
 }
 
 .swiper-container-3d .swiper-cube-shadow,
@@ -307,8 +277,7 @@
 .swiper-container-3d .swiper-slide-shadow-right,
 .swiper-container-3d .swiper-slide-shadow-top,
 .swiper-container-3d .swiper-wrapper {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .swiper-container-3d .swiper-slide-shadow-bottom,
@@ -325,22 +294,18 @@
 }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-top {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-bottom {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
@@ -359,14 +324,14 @@
 }
 
 .swiper-container-horizontal.swiper-container-css-mode > .swiper-wrapper {
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
 }
 
 .swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-  root---swiper-navigation-size: 44px;
+  scroll-snap-type: y mandatory;
+}
+.swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper :root {
+  --swiper-navigation-size: 44px;
 }
 
 .swiper-button-next,
@@ -378,15 +343,9 @@
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 }
 
@@ -446,10 +405,8 @@
 .swiper-pagination {
   position: absolute;
   text-align: center;
-  -webkit-transition: 0.3s opacity;
   transition: 0.3s opacity;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   z-index: 10;
 }
 
@@ -471,39 +428,32 @@
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transform: scale(0.33);
-          transform: scale(0.33);
+  transform: scale(0.33);
   position: relative;
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
-  -webkit-transform: scale(0.66);
-          transform: scale(0.66);
+  transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
-  -webkit-transform: scale(0.33);
-          transform: scale(0.33);
+  transform: scale(0.33);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
-  -webkit-transform: scale(0.66);
-          transform: scale(0.66);
+  transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
-  -webkit-transform: scale(0.33);
-          transform: scale(0.33);
+  transform: scale(0.33);
 }
 
 .swiper-pagination-bullet {
@@ -519,8 +469,7 @@ button.swiper-pagination-bullet {
   border: none;
   margin: 0;
   padding: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -538,8 +487,7 @@ button.swiper-pagination-bullet {
 .swiper-container-vertical > .swiper-pagination-bullets {
   right: 10px;
   top: 50%;
-  -webkit-transform: translate3d(0px, -50%, 0);
-          transform: translate3d(0px, -50%, 0);
+  transform: translate3d(0px, -50%, 0);
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -549,17 +497,13 @@ button.swiper-pagination-bullet {
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 8px;
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
-  -webkit-transition: 0.2s top, 0.2s -webkit-transform;
-  transition: 0.2s top, 0.2s -webkit-transform;
   transition: 0.2s transform, 0.2s top;
-  transition: 0.2s transform, 0.2s top, 0.2s -webkit-transform;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -568,23 +512,16 @@ button.swiper-pagination-bullet {
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   white-space: nowrap;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: 0.2s left, 0.2s -webkit-transform;
-  transition: 0.2s left, 0.2s -webkit-transform;
   transition: 0.2s transform, 0.2s left;
-  transition: 0.2s transform, 0.2s left, 0.2s -webkit-transform;
 }
 
 .swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: 0.2s right, 0.2s -webkit-transform;
-  transition: 0.2s right, 0.2s -webkit-transform;
   transition: 0.2s transform, 0.2s right;
-  transition: 0.2s transform, 0.2s right, 0.2s -webkit-transform;
 }
 
 .swiper-pagination-progressbar {
@@ -599,15 +536,12 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
+  transform: scale(0);
+  transform-origin: left top;
 }
 
 .swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  -webkit-transform-origin: right top;
-          transform-origin: right top;
+  transform-origin: right top;
 }
 
 .swiper-container-horizontal > .swiper-pagination-progressbar,
@@ -641,6 +575,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
+  touch-action: none;
   -ms-touch-action: none;
   background: rgba(0, 0, 0, 0.1);
 }
@@ -684,15 +619,9 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -718,12 +647,9 @@ button.swiper-pagination-bullet {
   margin-left: -21px;
   margin-top: -21px;
   z-index: 10;
-  -webkit-transform-origin: 50%;
-          transform-origin: 50%;
-  -webkit-animation: swiper-preloader-spin 1s infinite linear;
-          animation: swiper-preloader-spin 1s infinite linear;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  transform-origin: 50%;
+  animation: swiper-preloader-spin 1s infinite linear;
+  box-sizing: border-box;
   border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
   border-radius: 50%;
   border-top-color: transparent;
@@ -737,20 +663,11 @@ button.swiper-pagination-bullet {
   --swiper-preloader-color: #000;
 }
 
-@-webkit-keyframes swiper-preloader-spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes swiper-preloader-spin {
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 .swiper-container .swiper-notification {
   position: absolute;
   left: 0;
@@ -761,13 +678,11 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 .swiper-container-fade .swiper-slide {
   pointer-events: none;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -790,8 +705,7 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
   z-index: 1;
   visibility: hidden;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  transform-origin: 0 0;
   width: 100%;
   height: 100%;
 }
@@ -801,8 +715,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-cube.swiper-container-rtl .swiper-slide {
-  -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;
+  transform-origin: 100% 0;
 }
 
 .swiper-container-cube .swiper-slide-active,
@@ -835,7 +748,6 @@ button.swiper-pagination-bullet {
   height: 100%;
   background: #000;
   opacity: 0.6;
-  -webkit-filter: blur(50px);
   filter: blur(50px);
   z-index: 0;
 }
@@ -873,185 +785,146 @@ button.swiper-pagination-bullet {
   position: relative;
   margin-top: 72px;
 }
-
-#brandPage .ppCarousel .bp-container {
-  text-align: center;
-  position: relative;
-  z-index: 3;
-}
-
 #brandPage .ppCarousel .bp-container__carousel {
   max-width: 100%;
   position: relative;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-container {
   height: auto;
   padding: 24px 10px;
   margin: 0 auto;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-wrapper {
   padding-bottom: 10px;
   width: 100%;
   margin: 0 auto;
   height: auto;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-slide {
   border-radius: 6px;
   cursor: pointer;
   height: auto;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  transition: 0.3s ease-in-out;
+  box-sizing: border-box;
   background: #ffffff;
   text-align: center;
   padding: 16px 10px;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__mobile, #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__mobile {
   display: none;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__desktop, #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__desktop {
   display: block;
   margin: auto;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-pagination {
   bottom: auto;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet {
   margin-right: 5px;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet:last-of-type {
   margin-right: 0;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet {
   opacity: 1;
   background: #E8E8E8;
   width: 12px;
   height: 12px;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet-active {
   background-color: #cb8f10;
   opacity: 1;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet:focus,
 #brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet-active:focus {
   outline: transparent;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next, #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev {
   top: 50%;
   height: 32px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next:focus, #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev:focus {
   outline: transparent;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev,
 #brandPage .ppCarousel .bp-container__carousel .swiper-container-rtl .swiper-button-next,
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next,
 #brandPage .ppCarousel .bp-container__carousel .swiper-container-rtl .swiper-button-prev {
   background-image: none;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev:after,
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next:after {
   display: none;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev,
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next {
   width: 25px;
   height: 60px;
   background-color: #cb8f10;
   border-radius: 0 4px 4px 0;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
   margin: 0;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev:hover,
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next:hover {
   background-color: #af7b0e;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev .swiper-button-img,
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next .swiper-button-img {
   width: 12px;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev .swiper-button-img path,
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next .swiper-button-img path {
   fill: #ffffff;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev {
   left: 0;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev .swiper-button-img {
   margin-left: 4px;
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next {
   right: 0;
   border-radius: 4px 0 0 4px;
-  -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
 #brandPage .ppCarousel .bp-container__carousel .swiper-button-next .swiper-button-img {
   margin-right: 4px;
 }
 
-.layout-0 #brandPage .ppCarousel .bp-container__carousel .swiper-slide {
+.layout-0 #landingpage .ppCarousel .bp-container__carousel .swiper-slide {
   padding: 16px 40px;
 }
 
 @media only screen and (max-width: 810px) {
-  .mobile #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev,
-  .mobile #brandPage .ppCarousel .bp-container__carousel .swiper-button-next,
-  .mobileapp #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev,
-  .mobileapp #brandPage .ppCarousel .bp-container__carousel .swiper-button-next {
+  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-button-prev,
+  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-button-next,
+  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-button-prev,
+  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-button-next {
     display: none;
   }
-  .mobile #brandPage .ppCarousel .bp-container__carousel .swiper-slide,
-  .mobileapp #brandPage .ppCarousel .bp-container__carousel .swiper-slide {
+  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide,
+  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide {
     padding: 0;
   }
 }
-
 @media only screen and (max-width: 570px) {
-  .mobile #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__mobile, .mobile #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__mobile,
-  .mobileapp #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__mobile,
-  .mobileapp #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__mobile {
+  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__mobile, .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__mobile,
+  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__mobile,
+  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__mobile {
     display: block;
   }
-  .mobile #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__desktop, .mobile #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__desktop,
-  .mobileapp #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__desktop,
-  .mobileapp #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__desktop {
+  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__desktop, .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__desktop,
+  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__desktop,
+  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__desktop {
     display: none;
   }
 }
-
 .categoryPage .category-description {
   padding: 0 !important;
 }
@@ -1059,72 +932,54 @@ button.swiper-pagination-bullet {
 #brandPage {
   display: block;
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #ffffff;
   color: #212121;
 }
-
 #brandPage *, #brandPage *::before, #brandPage *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 #brandPage h1, #brandPage h2, #brandPage h3, #brandPage h4, #brandPage p, #brandPage ul, #brandPage ol, #brandPage li, #brandPage figure {
   margin: 0;
   padding: 0;
 }
-
 #brandPage input, #brandPage button, #brandPage textarea, #brandPage select {
   font: inherit;
 }
-
 #brandPage .hidden {
   display: none !important;
 }
-
 #brandPage.blank p {
   margin-top: 0;
 }
-
 #brandPage a {
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-
 #brandPage img {
   display: block;
   height: auto;
   max-width: 100%;
   aspect-ratio: attr(width), attr(height);
 }
-
 #brandPage .alza-btn__grey {
   background-color: #f8f8f8;
   color: #212121;
 }
-
 #brandPage .alza-btn__grey:hover {
   background-color: #e9e9e9;
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
 }
-
 #brandPage .alza-btn__grey:active {
   background-color: #d9d9d9;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 #brandPage .alza-btn__grey__disabled {
   background-color: rgba(248, 248, 248, 0.5);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 #brandPage .alza-btn__normal__adjusting {
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   height: 42px;
   line-height: 42px;
   font-size: 14px;
@@ -1133,90 +988,53 @@ button.swiper-pagination-bullet {
   font-weight: 500;
   display: inline-block;
   border: none;
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   cursor: pointer;
   padding: 0 15px;
 }
-
 #brandPage .alza-infobox {
   text-align: center;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 24px 16px 32px 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-preferred-size: calc((100% - 24px * (3 - 1)) / 3);
-      flex-basis: calc((100% - 24px * (3 - 1)) / 3);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: calc((100% - 48px) / 3);
   height: 416px;
   cursor: default;
 }
-
 #brandPage .alza-infobox img {
   width: 144px;
 }
-
 #brandPage .alza-infobox:hover {
-  -webkit-box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.15);
 }
-
 #brandPage .alza-infobox--layout {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
-
 #brandPage .alza-infobox--heading {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
 }
-
 #brandPage .alza-infobox--text {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-
 #brandPage .alza-infobox--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
-
 #brandPage .alza-tab {
   width: 120px;
   height: 46px;
@@ -1233,26 +1051,20 @@ button.swiper-pagination-bullet {
   padding: 15px 0;
   cursor: pointer;
   position: relative;
-  -webkit-transition: background 300ms ease;
   transition: background 300ms ease;
 }
-
 #brandPage .alza-tab::before {
   display: none;
 }
-
 #brandPage .alza-tab:hover {
   background-color: #f4f5f5;
 }
-
 #brandPage .alza-tab.alza-tab__active {
   background-color: #ffffff;
 }
-
 #brandPage .alza-tab.alza-tab__active:hover {
   background-color: #ffffff;
 }
-
 #brandPage .alza-tab.alza-tab__active::before {
   background: #cb8f10;
   right: -1px;
@@ -1266,7 +1078,6 @@ button.swiper-pagination-bullet {
   margin: 0;
   border-radius: 3px 3px 0 0;
 }
-
 #brandPage .alza-tab.alza-tab__active::after {
   position: absolute;
   z-index: 1;
@@ -1277,298 +1088,166 @@ button.swiper-pagination-bullet {
   bottom: -2px;
   background: #fff;
 }
-
 #brandPage .alza-tab--container {
   list-style: none;
   border-bottom: 1px solid #e0e0e0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   gap: 6px;
   margin-bottom: 48px;
 }
-
 #brandPage .alza-tab--content {
   display: none;
 }
-
 #brandPage .alza-tab--content.alza-tab--content__shown {
   display: block;
 }
-
 #brandPage .alza-card {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 12px;
 }
-
 #brandPage .alza-card--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
-
 #brandPage .alza-card--heading {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
 }
-
 #brandPage .alza-card--text {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-
 #brandPage .alza-card--icon {
   max-height: 65px;
 }
-
 #brandPage .bp-container__10 {
   padding-left: 108px;
   padding-right: 108px;
 }
-
 #brandPage .bp-container__12 {
   padding-left: 30px;
   padding-right: 30px;
 }
-
 #brandPage .bp-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   gap: 24px;
 }
-
 #brandPage .bp-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 36px;
 }
-
 #brandPage section {
   padding-top: 84px;
 }
-
 #brandPage .bp-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 36px;
   text-align: center;
   padding-top: 0;
 }
-
 #brandPage .bp-header--logo {
   width: 160px;
 }
-
 #brandPage .bp-header--banner {
   background-color: #000000;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-
 #brandPage .bp-header--caption {
   padding: 36px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      align-self: center;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
   gap: 48px;
 }
-
 #brandPage .bp-header--caption svg {
   width: 240px;
 }
-
 #brandPage .bp-header--text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 16px;
 }
-
 #brandPage .bp-header--divider {
   height: 1.5px;
   display: block;
-  background: -webkit-gradient(linear, right top, left top, from(#000000), color-stop(50%, #F4CA85), to(#000000));
   background: linear-gradient(to left, #000000 0%, #F4CA85 50%, #000000 100%);
 }
-
 #brandPage .bp-flavor {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
   gap: 24px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #brandPage .bp-flavor__icons {
-  max-width: calc((100% - 24px * (2 - 1)) / 2);
+  max-width: calc((100% - 24px) / 2);
   margin: auto;
 }
-
 #brandPage .bp-flavor__text {
-  max-width: calc((100% - 24px * (2 - 1)) / 2);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  max-width: calc((100% - 24px) / 2);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 36px;
 }
-
 #brandPage .bp-flavor svg {
   width: 350px;
   height: 350px;
 }
-
 #brandPage .bp-nutrition {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 36px;
 }
-
 #brandPage .bp-nutrition .alza-card {
-  max-width: calc((100% - 24px * (3 - 1)) / 3);
+  max-width: calc((100% - 48px) / 3);
 }
-
 #brandPage .bp-poll {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 36px;
 }
-
 #brandPage .bp-poll--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   gap: 24px;
   margin-top: 24px;
 }
-
 #brandPage .bp-poll .bp-divider {
   width: 2px;
   background-color: #e0e0e0;
 }
-
 #brandPage .bp-poll .alza-card {
   padding-bottom: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+  flex: 1 1 0;
 }
-
 #brandPage .bp-poll .alza-card--heading {
   width: 160px;
   margin: 0 auto;
@@ -1577,32 +1256,25 @@ button.swiper-pagination-bullet {
 .layout-0 #brandPage .bp-header--logo {
   width: 120px;
 }
-
 .layout-0 #brandPage .bp-header--caption {
   gap: 24px;
 }
-
 .layout-0 #brandPage .bp-header--caption svg {
   width: 150px;
   height: auto;
 }
-
 .layout-0 #brandPage .bp-header img {
   width: 30%;
 }
-
 .layout-0 #brandPage .bp-flavor__text {
   gap: 12px;
 }
-
 .layout-0 #brandPage .bp-flavor__icons svg {
   height: 300px;
   width: 300px;
 }
-
 .layout-0 #brandPage .bp-categories .alza-infobox {
-  -ms-flex-preferred-size: calc((100% - 24px * (2 - 1)) / 2);
-      flex-basis: calc((100% - 24px * (2 - 1)) / 2);
+  flex-basis: calc((100% - 24px) / 2);
 }
 
 @media only screen and (max-width: 810px) {
@@ -1640,8 +1312,7 @@ button.swiper-pagination-bullet {
   }
   .mobile #brandPage .bp-categories .alza-infobox,
   .mobileapp #brandPage .bp-categories .alza-infobox {
-    -ms-flex-preferred-size: calc((100% - 24px * (2 - 1)) / 2);
-        flex-basis: calc((100% - 24px * (2 - 1)) / 2);
+    flex-basis: calc((100% - 24px) / 2);
   }
   .mobile #brandPage .bp-categories .alza-infobox img,
   .mobileapp #brandPage .bp-categories .alza-infobox img {
@@ -1649,10 +1320,7 @@ button.swiper-pagination-bullet {
   }
   .mobile #brandPage .bp-poll--container,
   .mobileapp #brandPage .bp-poll--container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .mobile #brandPage .bp-poll--divider,
   .mobileapp #brandPage .bp-poll--divider {
@@ -1664,10 +1332,9 @@ button.swiper-pagination-bullet {
   }
   .mobile #brandPage .bp-poll .alza-card,
   .mobileapp #brandPage .bp-poll .alza-card {
-    max-width: calc((100% - 48px * (2 - 1)) / 2);
+    max-width: calc((100% - 48px) / 2);
   }
 }
-
 @media only screen and (max-width: 720px) {
   .mobile #brandPage .bp-header--caption,
   .mobileapp #brandPage .bp-header--caption {
@@ -1694,10 +1361,7 @@ button.swiper-pagination-bullet {
   }
   .mobile #brandPage .bp-flavor,
   .mobileapp #brandPage .bp-flavor {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     text-align: center;
   }
   .mobile #brandPage .bp-flavor__icons,
@@ -1715,17 +1379,15 @@ button.swiper-pagination-bullet {
   }
   .mobile #brandPage .bp-nutrition .alza-card,
   .mobileapp #brandPage .bp-nutrition .alza-card {
-    max-width: calc((100% - 24px * (2 - 1)) / 2);
+    max-width: calc((100% - 24px) / 2);
   }
 }
-
 @media only screen and (max-width: 635px) {
   .mobile #brandPage .bp-categories .alza-infobox,
   .mobileapp #brandPage .bp-categories .alza-infobox {
     height: 440px;
   }
 }
-
 @media only screen and (max-width: 570px) {
   .mobile #brandPage .bp-container__10, .mobile #brandPage .bp-container__12,
   .mobileapp #brandPage .bp-container__10,
@@ -1743,10 +1405,7 @@ button.swiper-pagination-bullet {
   }
   .mobile #brandPage .bp-header--banner,
   .mobileapp #brandPage .bp-header--banner {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
   .mobile #brandPage .bp-header__cat,
   .mobileapp #brandPage .bp-header__cat {
@@ -1754,19 +1413,14 @@ button.swiper-pagination-bullet {
   }
   .mobile #brandPage .bp-header__dog,
   .mobileapp #brandPage .bp-header__dog {
-    -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
+    transform: scaleX(-1);
     width: 40%;
   }
   .mobile #brandPage .bp-header--caption,
   .mobileapp #brandPage .bp-header--caption {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     text-align: left;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
     padding-left: 30px;
     gap: 32px;
   }
@@ -1776,14 +1430,10 @@ button.swiper-pagination-bullet {
     padding-right: 15px;
   }
 }
-
 @media only screen and (max-width: 500px) {
   .mobile #brandPage .bp-categories .alza-infobox--container,
   .mobileapp #brandPage .bp-categories .alza-infobox--container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .mobile #brandPage .bp-categories .alza-infobox img,
   .mobileapp #brandPage .bp-categories .alza-infobox img {
@@ -1798,25 +1448,17 @@ button.swiper-pagination-bullet {
     padding: 0 15px;
   }
 }
-
 @media only screen and (max-width: 440px) {
   .mobile #brandPage .bp-header--banner,
   .mobileapp #brandPage .bp-header--banner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    flex-direction: column-reverse;
+    align-items: flex-end;
   }
   .mobile #brandPage .bp-header--caption,
   .mobileapp #brandPage .bp-header--caption {
     text-align: center;
     padding: 40px 40px 24px 40px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .mobile #brandPage .bp-header--caption svg,
   .mobileapp #brandPage .bp-header--caption svg {
@@ -1832,10 +1474,7 @@ button.swiper-pagination-bullet {
   }
   .mobile #brandPage .bp-nutrition .alza-card--container,
   .mobileapp #brandPage .bp-nutrition .alza-card--container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .mobile #brandPage .bp-poll .alza-card,
   .mobileapp #brandPage .bp-poll .alza-card {
@@ -1843,13 +1482,9 @@ button.swiper-pagination-bullet {
   }
   .mobile #brandPage .bp-poll .bp-row,
   .mobileapp #brandPage .bp-poll .bp-row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 @media only screen and (max-width: 320px) {
   .mobile #brandPage .bp-categories .alza-tab,
   .mobileapp #brandPage .bp-categories .alza-tab {
