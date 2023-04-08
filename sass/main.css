@@ -11,12 +11,12 @@
   font-weight: 500;
   color: #cb8f10;
 }
-#brandPage .text__large {
+#brandPage .text--large {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
-#brandPage .text__normal {
+#brandPage .text--normal {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -32,12 +32,12 @@
   line-height: 22.5px;
   font-weight: 500;
 }
-.layout-0 #brandPage .text__large {
+.layout-0 #brandPage .text--large {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-.layout-0 #brandPage .text__normal {
+.layout-0 #brandPage .text--normal {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -64,14 +64,14 @@
     line-height: 20px;
     font-weight: 500;
   }
-  .mobile #brandPage .text__large,
-  .mobileapp #brandPage .text__large {
+  .mobile #brandPage .text--large,
+  .mobileapp #brandPage .text--large {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
   }
-  .mobile #brandPage .text__normal,
-  .mobileapp #brandPage .text__normal {
+  .mobile #brandPage .text--normal,
+  .mobileapp #brandPage .text--normal {
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
@@ -174,11 +174,11 @@
   background-color: #d9d9d9;
   box-shadow: none;
 }
-#brandPage .bp-revealer__disabled {
+#brandPage .bp-revealer--disabled {
   background-color: rgba(248, 248, 248, 0.5);
   box-shadow: none;
 }
-#brandPage .bp-revealer--container {
+#brandPage .bp-revealer__container {
   padding: 48px 0;
   margin: auto;
   width: 120px;
@@ -630,8 +630,7 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container > svg {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .swiper-slide-zoomed {
@@ -748,6 +747,7 @@ button.swiper-pagination-bullet {
   height: 100%;
   background: #000;
   opacity: 0.6;
+  -webkit-filter: blur(50px);
   filter: blur(50px);
   z-index: 0;
 }
@@ -781,26 +781,26 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
 }
 
-#brandPage .ppCarousel {
+#brandPage .bpCarousel {
   position: relative;
   margin-top: 72px;
 }
-#brandPage .ppCarousel .bp-container__carousel {
+#brandPage .bpCarousel .bp-container--carousel {
   max-width: 100%;
   position: relative;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-container {
+#brandPage .bpCarousel .bp-container--carousel .swiper-container {
   height: auto;
   padding: 24px 10px;
   margin: 0 auto;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-wrapper {
+#brandPage .bpCarousel .bp-container--carousel .swiper-wrapper {
   padding-bottom: 10px;
   width: 100%;
   margin: 0 auto;
   height: auto;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-slide {
+#brandPage .bpCarousel .bp-container--carousel .swiper-slide {
   border-radius: 6px;
   cursor: pointer;
   height: auto;
@@ -810,58 +810,58 @@ button.swiper-pagination-bullet {
   text-align: center;
   padding: 16px 10px;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__mobile, #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__mobile {
+#brandPage .bpCarousel .bp-container--carousel .swiper-slide .carousel-dog--mobile, #brandPage .bpCarousel .bp-container--carousel .swiper-slide .carousel-cat--mobile {
   display: none;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__desktop, #brandPage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__desktop {
+#brandPage .bpCarousel .bp-container--carousel .swiper-slide .carousel-dog--desktop, #brandPage .bpCarousel .bp-container--carousel .swiper-slide .carousel-cat--desktop {
   display: block;
   margin: auto;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-pagination {
+#brandPage .bpCarousel .bp-container--carousel .swiper-pagination {
   bottom: auto;
   left: 50%;
   transform: translate(-50%, 0);
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet {
+#brandPage .bpCarousel .bp-container--carousel .swiper-pagination-bullet {
   margin-right: 5px;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet:last-of-type {
+#brandPage .bpCarousel .bp-container--carousel .swiper-pagination-bullet:last-of-type {
   margin-right: 0;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet {
+#brandPage .bpCarousel .bp-container--carousel .swiper-pagination-bullet {
   opacity: 1;
   background: #E8E8E8;
   width: 12px;
   height: 12px;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet-active {
+#brandPage .bpCarousel .bp-container--carousel .swiper-pagination-bullet-active {
   background-color: #cb8f10;
   opacity: 1;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet:focus,
-#brandPage .ppCarousel .bp-container__carousel .swiper-pagination-bullet-active:focus {
+#brandPage .bpCarousel .bp-container--carousel .swiper-pagination-bullet:focus,
+#brandPage .bpCarousel .bp-container--carousel .swiper-pagination-bullet-active:focus {
   outline: transparent;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next, #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next, #brandPage .bpCarousel .bp-container--carousel .swiper-button-prev {
   top: 50%;
   height: 32px;
   transform: translateY(-50%);
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next:focus, #brandPage .ppCarousel .bp-container__carousel .swiper-button-prev:focus {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next:focus, #brandPage .bpCarousel .bp-container--carousel .swiper-button-prev:focus {
   outline: transparent;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-prev,
-#brandPage .ppCarousel .bp-container__carousel .swiper-container-rtl .swiper-button-next,
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next,
-#brandPage .ppCarousel .bp-container__carousel .swiper-container-rtl .swiper-button-prev {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-prev,
+#brandPage .bpCarousel .bp-container--carousel .swiper-container-rtl .swiper-button-next,
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next,
+#brandPage .bpCarousel .bp-container--carousel .swiper-container-rtl .swiper-button-prev {
   background-image: none;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-prev:after,
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next:after {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-prev:after,
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next:after {
   display: none;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-prev,
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-prev,
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next {
   width: 25px;
   height: 60px;
   background-color: #cb8f10;
@@ -870,58 +870,58 @@ button.swiper-pagination-bullet {
   box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
   margin: 0;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-prev:hover,
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next:hover {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-prev:hover,
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next:hover {
   background-color: #af7b0e;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-prev .swiper-button-img,
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next .swiper-button-img {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-prev .swiper-button-img,
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next .swiper-button-img {
   width: 12px;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-prev .swiper-button-img path,
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next .swiper-button-img path {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-prev .swiper-button-img path,
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next .swiper-button-img path {
   fill: #ffffff;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-prev {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-prev {
   left: 0;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-prev .swiper-button-img {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-prev .swiper-button-img {
   margin-left: 4px;
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next {
   right: 0;
   border-radius: 4px 0 0 4px;
   box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
 }
-#brandPage .ppCarousel .bp-container__carousel .swiper-button-next .swiper-button-img {
+#brandPage .bpCarousel .bp-container--carousel .swiper-button-next .swiper-button-img {
   margin-right: 4px;
 }
 
-.layout-0 #landingpage .ppCarousel .bp-container__carousel .swiper-slide {
+.layout-0 #landingpage .ppCarousel .bp-container--carousel .swiper-slide {
   padding: 16px 40px;
 }
 
 @media only screen and (max-width: 810px) {
-  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-button-prev,
-  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-button-next,
-  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-button-prev,
-  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-button-next {
+  .mobile #landingpage .ppCarousel .bp-container--carousel .swiper-button-prev,
+  .mobile #landingpage .ppCarousel .bp-container--carousel .swiper-button-next,
+  .mobileapp #landingpage .ppCarousel .bp-container--carousel .swiper-button-prev,
+  .mobileapp #landingpage .ppCarousel .bp-container--carousel .swiper-button-next {
     display: none;
   }
-  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide,
-  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide {
+  .mobile #landingpage .ppCarousel .bp-container--carousel .swiper-slide,
+  .mobileapp #landingpage .ppCarousel .bp-container--carousel .swiper-slide {
     padding: 0;
   }
 }
 @media only screen and (max-width: 570px) {
-  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__mobile, .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__mobile,
-  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__mobile,
-  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__mobile {
+  .mobile #landingpage .ppCarousel .bp-container--carousel .swiper-slide .carousel-dog--mobile, .mobile #landingpage .ppCarousel .bp-container--carousel .swiper-slide .carousel-cat--mobile,
+  .mobileapp #landingpage .ppCarousel .bp-container--carousel .swiper-slide .carousel-dog--mobile,
+  .mobileapp #landingpage .ppCarousel .bp-container--carousel .swiper-slide .carousel-cat--mobile {
     display: block;
   }
-  .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__desktop, .mobile #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__desktop,
-  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-dog__desktop,
-  .mobileapp #landingpage .ppCarousel .bp-container__carousel .swiper-slide .carousel-cat__desktop {
+  .mobile #landingpage .ppCarousel .bp-container--carousel .swiper-slide .carousel-dog--desktop, .mobile #landingpage .ppCarousel .bp-container--carousel .swiper-slide .carousel-cat--desktop,
+  .mobileapp #landingpage .ppCarousel .bp-container--carousel .swiper-slide .carousel-dog--desktop,
+  .mobileapp #landingpage .ppCarousel .bp-container--carousel .swiper-slide .carousel-cat--desktop {
     display: none;
   }
 }
@@ -961,23 +961,23 @@ button.swiper-pagination-bullet {
   max-width: 100%;
   aspect-ratio: attr(width), attr(height);
 }
-#brandPage .alza-btn__grey {
+#brandPage .alza-btn--grey {
   background-color: #f8f8f8;
   color: #212121;
 }
-#brandPage .alza-btn__grey:hover {
+#brandPage .alza-btn--grey:hover {
   background-color: #e9e9e9;
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
 }
-#brandPage .alza-btn__grey:active {
+#brandPage .alza-btn--grey:active {
   background-color: #d9d9d9;
   box-shadow: none;
 }
-#brandPage .alza-btn__grey__disabled {
+#brandPage .alza-btn--grey--disabled {
   background-color: rgba(248, 248, 248, 0.5);
   box-shadow: none;
 }
-#brandPage .alza-btn__normal__adjusting {
+#brandPage .alza-btn--normal--adjusting {
   border-radius: 4px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   height: 42px;
@@ -1011,23 +1011,23 @@ button.swiper-pagination-bullet {
 #brandPage .alza-infobox:hover {
   box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.15);
 }
-#brandPage .alza-infobox--layout {
+#brandPage .alza-infobox__layout {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
-#brandPage .alza-infobox--heading {
+#brandPage .alza-infobox__heading {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
 }
-#brandPage .alza-infobox--text {
+#brandPage .alza-infobox__text {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-#brandPage .alza-infobox--container {
+#brandPage .alza-infobox__container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -1059,13 +1059,13 @@ button.swiper-pagination-bullet {
 #brandPage .alza-tab:hover {
   background-color: #f4f5f5;
 }
-#brandPage .alza-tab.alza-tab__active {
+#brandPage .alza-tab.alza-tab--active {
   background-color: #ffffff;
 }
-#brandPage .alza-tab.alza-tab__active:hover {
+#brandPage .alza-tab.alza-tab--active:hover {
   background-color: #ffffff;
 }
-#brandPage .alza-tab.alza-tab__active::before {
+#brandPage .alza-tab.alza-tab--active::before {
   background: #cb8f10;
   right: -1px;
   left: -1px;
@@ -1078,7 +1078,7 @@ button.swiper-pagination-bullet {
   margin: 0;
   border-radius: 3px 3px 0 0;
 }
-#brandPage .alza-tab.alza-tab__active::after {
+#brandPage .alza-tab.alza-tab--active::after {
   position: absolute;
   z-index: 1;
   height: 3px;
@@ -1088,7 +1088,7 @@ button.swiper-pagination-bullet {
   bottom: -2px;
   background: #fff;
 }
-#brandPage .alza-tab--container {
+#brandPage .alza-tab__container {
   list-style: none;
   border-bottom: 1px solid #e0e0e0;
   display: flex;
@@ -1098,10 +1098,10 @@ button.swiper-pagination-bullet {
   gap: 6px;
   margin-bottom: 48px;
 }
-#brandPage .alza-tab--content {
+#brandPage .alza-tab__content {
   display: none;
 }
-#brandPage .alza-tab--content.alza-tab--content__shown {
+#brandPage .alza-tab__content.alza-tab__content--shown {
   display: block;
 }
 #brandPage .alza-card {
@@ -1110,7 +1110,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   gap: 12px;
 }
-#brandPage .alza-card--container {
+#brandPage .alza-card__container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -1118,24 +1118,24 @@ button.swiper-pagination-bullet {
   justify-content: center;
   gap: 24px;
 }
-#brandPage .alza-card--heading {
+#brandPage .alza-card__heading {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
 }
-#brandPage .alza-card--text {
+#brandPage .alza-card__text {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-#brandPage .alza-card--icon {
+#brandPage .alza-card__icon {
   max-height: 65px;
 }
-#brandPage .bp-container__10 {
+#brandPage .bp-container--10 {
   padding-left: 108px;
   padding-right: 108px;
 }
-#brandPage .bp-container__12 {
+#brandPage .bp-container--12 {
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -1162,10 +1162,10 @@ button.swiper-pagination-bullet {
   text-align: center;
   padding-top: 0;
 }
-#brandPage .bp-header--logo {
+#brandPage .bp-header__logo {
   width: 160px;
 }
-#brandPage .bp-header--banner {
+#brandPage .bp-header__banner {
   background-color: #000000;
   width: 100%;
   display: flex;
@@ -1174,7 +1174,7 @@ button.swiper-pagination-bullet {
   justify-content: space-between;
   align-items: flex-end;
 }
-#brandPage .bp-header--caption {
+#brandPage .bp-header__caption {
   padding: 36px 0;
   display: flex;
   flex-direction: column;
@@ -1182,15 +1182,15 @@ button.swiper-pagination-bullet {
   align-self: center;
   gap: 48px;
 }
-#brandPage .bp-header--caption svg {
+#brandPage .bp-header__caption svg {
   width: 240px;
 }
-#brandPage .bp-header--text {
+#brandPage .bp-header__text {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-#brandPage .bp-header--divider {
+#brandPage .bp-header__divider {
   height: 1.5px;
   display: block;
   background: linear-gradient(to left, #000000 0%, #F4CA85 50%, #000000 100%);
@@ -1203,11 +1203,11 @@ button.swiper-pagination-bullet {
   gap: 24px;
   justify-content: space-between;
 }
-#brandPage .bp-flavor__icons {
+#brandPage .bp-flavor--icons {
   max-width: calc((100% - 24px) / 2);
   margin: auto;
 }
-#brandPage .bp-flavor__text {
+#brandPage .bp-flavor--text {
   max-width: calc((100% - 24px) / 2);
   display: flex;
   flex-direction: column;
@@ -1232,7 +1232,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   gap: 36px;
 }
-#brandPage .bp-poll--container {
+#brandPage .bp-poll__container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -1248,28 +1248,28 @@ button.swiper-pagination-bullet {
   padding-bottom: 0;
   flex: 1 1 0;
 }
-#brandPage .bp-poll .alza-card--heading {
+#brandPage .bp-poll .alza-card__heading {
   width: 160px;
   margin: 0 auto;
 }
 
-.layout-0 #brandPage .bp-header--logo {
+.layout-0 #brandPage .bp-header__logo {
   width: 120px;
 }
-.layout-0 #brandPage .bp-header--caption {
+.layout-0 #brandPage .bp-header__caption {
   gap: 24px;
 }
-.layout-0 #brandPage .bp-header--caption svg {
+.layout-0 #brandPage .bp-header__caption svg {
   width: 150px;
   height: auto;
 }
 .layout-0 #brandPage .bp-header img {
   width: 30%;
 }
-.layout-0 #brandPage .bp-flavor__text {
+.layout-0 #brandPage .bp-flavor--text {
   gap: 12px;
 }
-.layout-0 #brandPage .bp-flavor__icons svg {
+.layout-0 #brandPage .bp-flavor--icons svg {
   height: 300px;
   width: 300px;
 }
@@ -1278,35 +1278,35 @@ button.swiper-pagination-bullet {
 }
 
 @media only screen and (max-width: 810px) {
-  .mobile #brandPage .bp-header--logo,
-  .mobileapp #brandPage .bp-header--logo {
+  .mobile #brandPage .bp-header__logo,
+  .mobileapp #brandPage .bp-header__logo {
     width: 120px;
   }
-  .mobile #brandPage .bp-header--caption,
-  .mobileapp #brandPage .bp-header--caption {
+  .mobile #brandPage .bp-header__caption,
+  .mobileapp #brandPage .bp-header__caption {
     gap: 32px;
   }
-  .mobile #brandPage .bp-header--caption svg,
-  .mobileapp #brandPage .bp-header--caption svg {
+  .mobile #brandPage .bp-header__caption svg,
+  .mobileapp #brandPage .bp-header__caption svg {
     width: 150px;
     height: auto;
   }
-  .mobile #brandPage .bp-header__cat, .mobile #brandPage .bp-header__dog,
-  .mobileapp #brandPage .bp-header__cat,
-  .mobileapp #brandPage .bp-header__dog {
+  .mobile #brandPage .bp-header--cat, .mobile #brandPage .bp-header--dog,
+  .mobileapp #brandPage .bp-header--cat,
+  .mobileapp #brandPage .bp-header--dog {
     width: 30%;
   }
-  .mobile #brandPage .bp-flavor__text,
-  .mobileapp #brandPage .bp-flavor__text {
+  .mobile #brandPage .bp-flavor--text,
+  .mobileapp #brandPage .bp-flavor--text {
     gap: 12px;
   }
-  .mobile #brandPage .bp-flavor__icons svg,
-  .mobileapp #brandPage .bp-flavor__icons svg {
+  .mobile #brandPage .bp-flavor--icons svg,
+  .mobileapp #brandPage .bp-flavor--icons svg {
     width: 250px;
     height: 250px;
   }
-  .mobile #brandPage .bp-categories .bp-container__10,
-  .mobileapp #brandPage .bp-categories .bp-container__10 {
+  .mobile #brandPage .bp-categories .bp-container--10,
+  .mobileapp #brandPage .bp-categories .bp-container--10 {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -1318,12 +1318,12 @@ button.swiper-pagination-bullet {
   .mobileapp #brandPage .bp-categories .alza-infobox img {
     width: 128px;
   }
-  .mobile #brandPage .bp-poll--container,
-  .mobileapp #brandPage .bp-poll--container {
+  .mobile #brandPage .bp-poll__container,
+  .mobileapp #brandPage .bp-poll__container {
     flex-direction: column;
   }
-  .mobile #brandPage .bp-poll--divider,
-  .mobileapp #brandPage .bp-poll--divider {
+  .mobile #brandPage .bp-poll__divider,
+  .mobileapp #brandPage .bp-poll__divider {
     display: none;
   }
   .mobile #brandPage .bp-poll .bp-row,
@@ -1336,23 +1336,23 @@ button.swiper-pagination-bullet {
   }
 }
 @media only screen and (max-width: 720px) {
-  .mobile #brandPage .bp-header--caption,
-  .mobileapp #brandPage .bp-header--caption {
+  .mobile #brandPage .bp-header__caption,
+  .mobileapp #brandPage .bp-header__caption {
     gap: 12px;
     padding: 16px 0;
   }
-  .mobile #brandPage .bp-header--caption svg,
-  .mobileapp #brandPage .bp-header--caption svg {
+  .mobile #brandPage .bp-header__caption svg,
+  .mobileapp #brandPage .bp-header__caption svg {
     width: 100px;
     height: auto;
   }
-  .mobile #brandPage .bp-header__cat, .mobile #brandPage .bp-header__dog,
-  .mobileapp #brandPage .bp-header__cat,
-  .mobileapp #brandPage .bp-header__dog {
+  .mobile #brandPage .bp-header--cat, .mobile #brandPage .bp-header--dog,
+  .mobileapp #brandPage .bp-header--cat,
+  .mobileapp #brandPage .bp-header--dog {
     width: 25%;
   }
-  .mobile #brandPage .bp-header--divider,
-  .mobileapp #brandPage .bp-header--divider {
+  .mobile #brandPage .bp-header__divider,
+  .mobileapp #brandPage .bp-header__divider {
     display: none;
   }
   .mobile #brandPage .bp-header .bp-heading--h1,
@@ -1364,17 +1364,17 @@ button.swiper-pagination-bullet {
     flex-direction: column;
     text-align: center;
   }
-  .mobile #brandPage .bp-flavor__icons,
-  .mobileapp #brandPage .bp-flavor__icons {
+  .mobile #brandPage .bp-flavor--icons,
+  .mobileapp #brandPage .bp-flavor--icons {
     max-width: 100%;
   }
-  .mobile #brandPage .bp-flavor__text,
-  .mobileapp #brandPage .bp-flavor__text {
+  .mobile #brandPage .bp-flavor--text,
+  .mobileapp #brandPage .bp-flavor--text {
     margin-top: 48px;
     max-width: 100%;
   }
-  .mobile #brandPage .bp-flavor__text .bp-heading--h2,
-  .mobileapp #brandPage .bp-flavor__text .bp-heading--h2 {
+  .mobile #brandPage .bp-flavor--text .bp-heading--h2,
+  .mobileapp #brandPage .bp-flavor--text .bp-heading--h2 {
     margin-bottom: 24px;
   }
   .mobile #brandPage .bp-nutrition .alza-card,
@@ -1389,9 +1389,9 @@ button.swiper-pagination-bullet {
   }
 }
 @media only screen and (max-width: 570px) {
-  .mobile #brandPage .bp-container__10, .mobile #brandPage .bp-container__12,
-  .mobileapp #brandPage .bp-container__10,
-  .mobileapp #brandPage .bp-container__12 {
+  .mobile #brandPage .bp-container--10, .mobile #brandPage .bp-container--12,
+  .mobileapp #brandPage .bp-container--10,
+  .mobileapp #brandPage .bp-container--12 {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1403,36 +1403,36 @@ button.swiper-pagination-bullet {
   .mobileapp #brandPage .bp-container section.bp-header {
     padding-top: 0;
   }
-  .mobile #brandPage .bp-header--banner,
-  .mobileapp #brandPage .bp-header--banner {
+  .mobile #brandPage .bp-header__banner,
+  .mobileapp #brandPage .bp-header__banner {
     flex-direction: row-reverse;
   }
-  .mobile #brandPage .bp-header__cat,
-  .mobileapp #brandPage .bp-header__cat {
+  .mobile #brandPage .bp-header--cat,
+  .mobileapp #brandPage .bp-header--cat {
     display: none;
   }
-  .mobile #brandPage .bp-header__dog,
-  .mobileapp #brandPage .bp-header__dog {
+  .mobile #brandPage .bp-header--dog,
+  .mobileapp #brandPage .bp-header--dog {
     transform: scaleX(-1);
     width: 40%;
   }
-  .mobile #brandPage .bp-header--caption,
-  .mobileapp #brandPage .bp-header--caption {
+  .mobile #brandPage .bp-header__caption,
+  .mobileapp #brandPage .bp-header__caption {
     flex-grow: 1;
     text-align: left;
     align-items: flex-start;
     padding-left: 30px;
     gap: 32px;
   }
-  .mobile #brandPage .bp-categories .bp-container__10,
-  .mobileapp #brandPage .bp-categories .bp-container__10 {
+  .mobile #brandPage .bp-categories .bp-container--10,
+  .mobileapp #brandPage .bp-categories .bp-container--10 {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 @media only screen and (max-width: 500px) {
-  .mobile #brandPage .bp-categories .alza-infobox--container,
-  .mobileapp #brandPage .bp-categories .alza-infobox--container {
+  .mobile #brandPage .bp-categories .alza-infobox__container,
+  .mobileapp #brandPage .bp-categories .alza-infobox__container {
     flex-direction: column;
   }
   .mobile #brandPage .bp-categories .alza-infobox img,
@@ -1443,37 +1443,37 @@ button.swiper-pagination-bullet {
   .mobileapp #brandPage .bp-categories .alza-btn {
     margin-top: 24px;
   }
-  .mobile #brandPage .bp-categories .alza-tab--container,
-  .mobileapp #brandPage .bp-categories .alza-tab--container {
+  .mobile #brandPage .bp-categories .alza-tab__container,
+  .mobileapp #brandPage .bp-categories .alza-tab__container {
     padding: 0 15px;
   }
 }
 @media only screen and (max-width: 440px) {
-  .mobile #brandPage .bp-header--banner,
-  .mobileapp #brandPage .bp-header--banner {
+  .mobile #brandPage .bp-header__banner,
+  .mobileapp #brandPage .bp-header__banner {
     flex-direction: column-reverse;
     align-items: flex-end;
   }
-  .mobile #brandPage .bp-header--caption,
-  .mobileapp #brandPage .bp-header--caption {
+  .mobile #brandPage .bp-header__caption,
+  .mobileapp #brandPage .bp-header__caption {
     text-align: center;
     padding: 40px 40px 24px 40px;
     align-items: center;
   }
-  .mobile #brandPage .bp-header--caption svg,
-  .mobileapp #brandPage .bp-header--caption svg {
+  .mobile #brandPage .bp-header__caption svg,
+  .mobileapp #brandPage .bp-header__caption svg {
     width: 160px;
   }
-  .mobile #brandPage .bp-header__dog,
-  .mobileapp #brandPage .bp-header__dog {
+  .mobile #brandPage .bp-header--dog,
+  .mobileapp #brandPage .bp-header--dog {
     width: 80%;
   }
   .mobile #brandPage .bp-nutrition .alza-card,
   .mobileapp #brandPage .bp-nutrition .alza-card {
     max-width: 100%;
   }
-  .mobile #brandPage .bp-nutrition .alza-card--container,
-  .mobileapp #brandPage .bp-nutrition .alza-card--container {
+  .mobile #brandPage .bp-nutrition .alza-card__container,
+  .mobileapp #brandPage .bp-nutrition .alza-card__container {
     flex-direction: column;
   }
   .mobile #brandPage .bp-poll .alza-card,

@@ -51,12 +51,12 @@
 
     //btns
     .alza-btn
-        &__grey
+        &--grey
             background-color: $c-grey-1
             color: $c-grey-6
             @include btnStates($c-grey-1)
-        &__normal
-            &__adjusting
+        &--normal
+            &--adjusting
                 @include btnAppearance(42, 14)
                 padding: 0 15px
 
@@ -79,18 +79,18 @@
         &:hover
             box-shadow: 0 2px 6px 0px rgba(0,0,0,0.15)
 
-        &--layout
+        &__layout
             @include flexVert
             align-items: center
             gap: 16px
 
-        &--heading
+        &__heading
             @include type(16px, 1.25, 500)
 
-        &--text
+        &__text
             @include type(14px, 1.5, 400)
 
-        &--container
+        &__container
             @include flexHor
             flex-wrap: wrap
             justify-content: center
@@ -119,7 +119,7 @@
         &:hover
             background-color: $c-grey-2
 
-        &.alza-tab__active
+        &.alza-tab--active
             background-color: $c-white
 
             &:hover
@@ -148,7 +148,7 @@
                 bottom: -2px
                 background: #fff
 
-        &--container
+        &__container
             list-style: none
             border-bottom: 1px solid $c-grey-3
             @include flexHor
@@ -156,10 +156,10 @@
             gap: 6px
             margin-bottom: 48px
 
-        &--content
+        &__content
             display: none
 
-            &.alza-tab--content__shown
+            &.alza-tab__content--shown
                 display: block
 
 
@@ -169,29 +169,29 @@
         @include flexVert
         gap: 12px
 
-        &--container
+        &__container
             @include flexHor
             flex-wrap: wrap
             justify-content: center
             gap: 24px
 
-        &--heading
+        &__heading
             @include type(16px, 1.25, 500)
 
-        &--text
+        &__text
             @include type(14px, 1.5, 400)
 
-        &--icon
+        &__icon
             max-height: 65px
 
 
     //layout
     .bp-container
-        &__10
+        &--10
             padding-left: 108px
             padding-right: 108px
 
-        &__12
+        &--12
             padding-left: 30px
             padding-right: 30px
 
@@ -216,17 +216,17 @@
         text-align: center
         padding-top: 0
 
-        &--logo
+        &__logo
             width: 160px
 
-        &--banner
+        &__banner
             background-color: $c-black
             width: 100%
             @include flexHor
             justify-content: space-between
             align-items: flex-end
 
-        &--caption
+        &__caption
             padding: 36px 0
             @include flexVert
             align-items: center
@@ -236,11 +236,11 @@
             svg
                 width: 240px
 
-        &--text
+        &__text
             @include flexVert
             gap: 16px
         
-        &--divider
+        &__divider
             height: 1.5px
             display: block
             background: linear-gradient(to left, $c-black 0%, $c-ochre-purina 50%, $c-black 100% )
@@ -251,11 +251,11 @@
         gap: 24px
         justify-content: space-between
 
-        &__icons
+        &--icons
             max-width: calc((100% - 24px * (2 - 1)) / 2)
             margin: auto
 
-        &__text
+        &--text
             max-width: calc((100% - 24px * (2 - 1)) / 2)
             @include flexVert
             gap: 36px
@@ -277,7 +277,7 @@
         @include flexVert
         gap: 36px
 
-        &--container
+        &__container
             @include flexHor
             justify-content: center
             gap: 24px
@@ -291,17 +291,17 @@
             padding-bottom: 0
             flex: 1 1 0
 
-            &--heading
+            &__heading
                 width: 160px
                 margin: 0 auto        
 
 //3col
 .layout-0 #brandPage
     .bp-header
-        &--logo
+        &__logo
             width: 120px
 
-        &--caption
+        &__caption
             gap: 24px
             svg
                 width: 150px
@@ -310,10 +310,10 @@
             width: 30%
 
     .bp-flavor
-        &__text
+        &--text
             gap: 12px
         
-        &__icons svg
+        &--icons svg
             height: 300px
             width: 300px
 
@@ -326,29 +326,29 @@
     .mobile #brandPage,
     .mobileapp #brandPage
         .bp-header
-            &--logo
+            &__logo
                 width: 120px
 
-            &--caption
+            &__caption
                 gap: 32px
 
                 svg
                     width: 150px
                     height: auto
 
-            &__cat, &__dog
+            &--cat, &--dog
                 width: 30%
 
         .bp-flavor
-            &__text
+            &--text
                 gap: 12px
 
-            &__icons svg
+            &--icons svg
                 width: 250px
                 height: 250px
 
         .bp-categories
-            .bp-container__10
+            .bp-container--10
                 padding-left: 30px
                 padding-right: 30px
 
@@ -359,10 +359,10 @@
                     width: 128px
 
         .bp-poll
-            &--container
+            &__container
                 flex-direction: column
 
-            &--divider
+            &__divider
                 display: none
 
             .bp-row
@@ -375,7 +375,7 @@
     .mobile #brandPage,
     .mobileapp #brandPage
         .bp-header
-            &--caption
+            &__caption
                 gap: 12px
                 padding: 16px 0
 
@@ -383,10 +383,10 @@
                     width: 100px
                     height: auto
 
-            &__cat, &__dog
+            &--cat, &--dog
                 width: 25%
 
-            &--divider
+            &__divider
                 display: none
 
             .bp-heading--h1
@@ -396,10 +396,10 @@
             flex-direction: column
             text-align: center
 
-            &__icons
+            &--icons
                 max-width: 100%
 
-            &__text
+            &--text
                 margin-top: 48px
                 max-width: 100%
 
@@ -421,7 +421,7 @@
     .mobile #brandPage,
     .mobileapp #brandPage
         .bp-container
-            &__10, &__12
+            &--10, &--12
                 padding-left: 15px
                 padding-right: 15px
 
@@ -432,17 +432,17 @@
                     padding-top: 0
 
         .bp-header
-            &--banner
+            &__banner
                 flex-direction: row-reverse
 
-            &__cat
+            &--cat
                 display: none
 
-            &__dog
+            &--dog
                 transform: scaleX(-1)
                 width: 40%
 
-            &--caption
+            &__caption
                 flex-grow: 1
                 text-align: left
                 align-items: flex-start
@@ -450,7 +450,7 @@
                 gap: 32px
 
         .bp-categories
-            .bp-container__10
+            .bp-container--10
                 padding-left: 15px
                 padding-right: 15px
 
@@ -459,7 +459,7 @@
     .mobileapp #brandPage
         .bp-categories
             .alza-infobox
-                &--container
+                &__container
                     flex-direction: column
 
                 img
@@ -469,18 +469,18 @@
                 margin-top: 24px
 
         .bp-categories
-            .alza-tab--container
+            .alza-tab__container
                 padding: 0 15px
 
 @media only screen and (max-width: 440px)
     .mobile #brandPage,
     .mobileapp #brandPage
         .bp-header
-            &--banner
+            &__banner
                 flex-direction: column-reverse
                 align-items: flex-end
             
-            &--caption
+            &__caption
                 text-align: center
                 padding: 40px 40px 24px 40px
                 align-items: center
@@ -488,14 +488,14 @@
                 svg
                     width: 160px
 
-            &__dog
+            &--dog
                 width: 80%
 
         .bp-nutrition
             .alza-card
                 max-width: 100%
 
-                &--container
+                &__container
                     flex-direction: column
 
         .bp-poll
